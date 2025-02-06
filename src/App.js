@@ -9,7 +9,7 @@ function App() {
     const [result, setResult] = useState(null);
 
     const calculate = async () => {
-        const response = await axios.post("http://localhost:5000/calculate", { num1: Number(num1), num2: Number(num2), operation });
+        const response = await axios.post("https://api-gateway-production-0763.up.railway.app/calculate", { num1: Number(num1), num2: Number(num2), operation });
         setResult(response.data.result);
     };
 
@@ -20,7 +20,7 @@ function App() {
 
     return (
         <div className="app-container">
-            <h2>Microservices Calculator</h2>
+            <h2>Calculator</h2>
             <div className="inputs-container">
                 <input
                     className="input-field"
