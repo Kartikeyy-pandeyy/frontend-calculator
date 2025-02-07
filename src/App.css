@@ -1,7 +1,7 @@
 /* App.css */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  background: beige;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ h2 {
 }
 
 .input-field:focus {
-  border-color: #0072ff;
+  border-color:rgb(201, 151, 86);
 }
 
 .operations-container {
@@ -55,8 +55,9 @@ h2 {
 }
 
 .op-btn {
-  background: #0072ff;
+  background: burlywood;
   color: white;
+  margin: 5px;
   font-size: 1rem;
   padding: 10px 15px;
   border: none;
@@ -66,33 +67,19 @@ h2 {
 }
 
 .op-btn:hover {
-  background: #005ecb;
+  background: brown;
   transform: scale(1.05);
 }
 
 .op-btn:focus {
-  background: #0048a5;
+  background: rgb(201, 151, 86);
 }
 
-.calculate-button {
-  background: #28a745;
-  color: white;
-  font-size: 1.2rem;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
 
-.calculate-button:hover {
-  background: #218838;
-  transform: scale(1.05);
-}
 
 .result-text {
   color: #333;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-top: 20px;
   font-weight: bold;
   background: #f4f4f4;

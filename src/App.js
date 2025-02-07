@@ -8,23 +8,9 @@ function App() {
     const [operation, setOperation] = useState("");
     const [result, setResult] = useState(null);
 
-    const calculate = async () => {
+    const calculate = async (operation) => {
         const response = await axios.post("https://api-gateway-production-0763.up.railway.app/calculate", { num1: Number(num1), num2: Number(num2), operation });
         setResult(response.data.result);
-    };
-
-    const handleOnClickAdd = (e) => {
-        // Change operation based on slider value
-        setOperation("add");
-    };
-    const handleOnClickSubtract = (e) => {
-        setOperation("subtract");
-    };
-    const handleOnClickMultiply = (e) => {
-        setOperation("multiply")
-    };
-    const handleOnClickDivide = (e) => {
-        setOperation("divide")
     };
 
     return (
@@ -47,12 +33,11 @@ function App() {
                 />
             </div>
 
-            <button className="op-btn" onClick={handleOnClickAdd}>Add</button>
-            <button className="op-btn" onClick={handleOnClickSubtract}>Subtract</button>
-            <button className="op-btn" onClick={handleOnClickMultiply}>Multiply</button>
-            <button className="op-btn" onClick={handleOnClickDivide}>Divide</button>
+            <button className="op-btn" onClick={ () => calculate("add")} >Add</button>
+            <button className="op-btn" onClick={() => calculate("subtract")}>Subtract</button>
+            <button className="op-btn" onClick={() => calculate ("multiply")}>Multiply</button>
+            <button className="op-btn" onClick={() => calculate ("divide")}>Divide</button>
 
-            <button className="calculate-button" onClick={calculate}>Calculate</button>
             {result !== null && <h3 className="result-text">Result: {result}</h3>}
         </div>
     );
