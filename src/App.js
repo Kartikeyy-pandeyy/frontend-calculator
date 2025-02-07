@@ -37,6 +37,7 @@ function App() {
             <button className="op-btn" onClick={() => calculate("subtract")}>Subtract</button>
             <button className="op-btn" onClick={() => calculate ("multiply")}>Multiply</button>
             <button className="op-btn" onClick={() => calculate ("divide")}>Divide</button>
+            <button className="op-btn" onClick={() => calculate ("exponent")}>Exponent</button>
 
             {result !== null && <h3 className="result-text">Result: {result}</h3>}
         </div>
