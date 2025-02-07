@@ -48,9 +48,9 @@ function App() {
             </div>
 
             <button className="op-btn" onClick={handleOnClickAdd}>Add</button>
-            <button className="op-btn" onClick={handleOnClickAdd}>Subtract</button>
-            <button className="op-btn" onClick={handleOnClickAdd}>Multiply</button>
-            <button className="op-btn" onClick={handleOnClickAdd}>Divide</button>
+            <button className="op-btn" onClick={handleOnClickSubtract}>Subtract</button>
+            <button className="op-btn" onClick={handleOnClickMultiply}>Multiply</button>
+            <button className="op-btn" onClick={handleOnClickDivide}>Divide</button>
 
             <button className="calculate-button" onClick={calculate}>Calculate</button>
             {result !== null && <h3 className="result-text">Result: {result}</h3>}
