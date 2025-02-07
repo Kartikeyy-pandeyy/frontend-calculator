@@ -5,7 +5,7 @@ import './App.css';  // Import the CSS file
 function App() {
     const [num1, setNum1] = useState("");
     const [num2, setNum2] = useState("");
-    const [operation, setOperation] = useState("add");
+    const [operation, setOperation] = useState("");
     const [result, setResult] = useState(null);
 
     const calculate = async () => {
@@ -13,9 +13,18 @@ function App() {
         setResult(response.data.result);
     };
 
-    const handleSliderChange = (e) => {
+    const handleOnClickAdd = (e) => {
         // Change operation based on slider value
-        setOperation(e.target.value === "1" ? "add" : "subtract");
+        setOperation("add");
+    };
+    const handleOnClickSubtract = (e) => {
+        setOperation("subtract");
+    };
+    const handleOnClickMultiply = (e) => {
+        setOperation("multiply")
+    };
+    const handleOnClickDivide = (e) => {
+        setOperation("divide")
     };
 
     return (
@@ -38,17 +47,10 @@ function App() {
                 />
             </div>
 
-            <div className="slider-container">
-                <label className="slider-label">{operation === "add" ? "Addition" : "Subtraction"}</label>
-                <input
-                    type="range"
-                    min="0"
-                    max="1"
-                    value={operation === "add" ? "1" : "0"}
-                    onChange={handleSliderChange}
-                    className="slider"
-                />
-            </div>
+            <button className="op-btn" onClick={handleOnClickAdd}>Add</button>
+            <button className="op-btn" onClick={handleOnClickAdd}>Subtract</button>
+            <button className="op-btn" onClick={handleOnClickAdd}>Multiply</button>
+            <button className="op-btn" onClick={handleOnClickAdd}>Divide</button>
 
             <button className="calculate-button" onClick={calculate}>Calculate</button>
             {result !== null && <h3 className="result-text">Result: {result}</h3>}
