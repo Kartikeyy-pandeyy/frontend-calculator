@@ -90,7 +90,16 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
+.op-btn{
+  background-color: whitesmoke;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 .calculate-button:hover {
   background-color: #45a049;
 }
