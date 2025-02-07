@@ -5,7 +5,6 @@ import './App.css';  // Import the CSS file
 function App() {
     const [num1, setNum1] = useState("");
     const [num2, setNum2] = useState("");
-    const [operation, setOperation] = useState("");
     const [result, setResult] = useState(null);
 
     const calculate = async (operation) => {
@@ -39,8 +38,11 @@ function App() {
             <button className="op-btn" onClick={() => calculate ("divide")}>Divide</button>
             <button className="op-btn" onClick={() => calculate ("exponent")}>Exponent</button>
 
-            {result !== null && <h3 className="result-text">Result: {result}</h3>}
+            <div className="result">
+             {result !== null && <h3 className="result-text">Result: {result}</h3>}
         </div>
+        </div>
+        
     );
 }
 
